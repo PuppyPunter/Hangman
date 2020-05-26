@@ -38,8 +38,7 @@ namespace MyApp
             
 
             //Sets up the the possible guesses
-            Console.WriteLine("How long is your word? \n(enter the number of letters)");
-            int numberOfLetters = Int16.Parse(Console.ReadLine());
+            int numberOfLetters = p1Word.Length;
             string[] arrayOfLetters;
             arrayOfLetters = new string[numberOfLetters];
             
