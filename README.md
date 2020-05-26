@@ -1,10 +1,3 @@
-# Hangman
-This is my first independent C# project. Built using Visual Studio Code it is a very simple 2 player hangman 
-
-
-
-//____________________________________________________________________________________________________________________
-
 using System;
 using System.Linq;
 
@@ -38,16 +31,17 @@ namespace MyApp
             Console.WriteLine("P1, enter your name");
             string p1Name = Console.ReadLine();
             char p1firstLetter = (Char.ToUpper(p1Name[0]));
+
+            //Gets the word for Hangman
+            Console.WriteLine("Enter word");
+            string p1Word = (Console.ReadLine()).ToLower();
             
+
             //Sets up the the possible guesses
             Console.WriteLine("How long is your word? \n(enter the number of letters)");
             int numberOfLetters = Int16.Parse(Console.ReadLine());
             string[] arrayOfLetters;
             arrayOfLetters = new string[numberOfLetters];
-
-            //Gets the word for Hangman
-            Console.WriteLine("Enter word");
-            string p1Word = Console.ReadLine();
             
             //Creates the array where each letter of the response is stored
             char[] wordToGuess;
@@ -105,7 +99,7 @@ namespace MyApp
                                 //Win code
                                 Console.WriteLine(listOfImages[guesses]);
                                 Console.WriteLine("You win P2!");
-                                Console.WriteLine($"The word was +{p1Word}+!");
+                                Console.WriteLine($"The word was +{p1Word}+");
                                 return;
                             }
 
