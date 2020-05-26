@@ -125,25 +125,26 @@ namespace MyApp
                     if (correctLetters[starting] == 1)
                     {
                         Console.Write(wordToGuess[starting]);
-
                     }
 
                     //Prints blanks
                     else
                     {
-                        Console.Write("_");
-
+                        Console.Write("-");
                     }
                 }
 
                 //Prints out the hangman and how many guesses are left
-                Console.WriteLine(listOfImages[guesses]);
+                Console.WriteLine($"\n {listOfImages[guesses]}");
                 Console.WriteLine($"You have {6- guesses} guesses left");
-
+                
+                //If the word isn't guessed in time
+                if(guesses == 6)
+                {
+                    Console.WriteLine($"{p1Name} wins!");
                 }
 
+                }
             }
-         
     }
-
 }
