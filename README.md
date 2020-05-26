@@ -38,8 +38,7 @@ namespace MyApp
             
 
             //Sets up the the possible guesses
-            Console.WriteLine("How long is your word? \n(enter the number of letters)");
-            int numberOfLetters = Int16.Parse(Console.ReadLine());
+            int numberOfLetters = p1Word.Length;
             string[] arrayOfLetters;
             arrayOfLetters = new string[numberOfLetters];
             
@@ -60,7 +59,8 @@ namespace MyApp
 //____________________________________________________________________________________________________________________
 
             //Intro for P2
-            Console.WriteLine("\n \n \n \n \n \nWelcome Player 2! Enter in your name");
+            Console.Clear(); 
+            Console.WriteLine("Welcome Player 2! Enter in your name");
             string p2Name = Console.ReadLine();
             char p2FirstLetter = Char.ToUpper(p2Name[0]);
 
@@ -98,7 +98,7 @@ namespace MyApp
                             {
                                 //Win code
                                 Console.WriteLine(listOfImages[guesses]);
-                                Console.WriteLine("You win P2!");
+                                Console.WriteLine($"{p2Name} wins!!");
                                 Console.WriteLine($"The word was +{p1Word}+");
                                 return;
                             }
